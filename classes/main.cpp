@@ -18,21 +18,33 @@ class Pickle{
 
 
         }
-        int product(){
-            int product = x * y;
-            return product;
+        int product();
+        int getSum(){
+            int sum = x+y;
+            return sum;
         }
 
 
 };
+
+int Pickle::product(){
+            int product = x * y;
+            return product;
+        }
 
 int main(){
     Pickle one;
 
     one.setValues();
     int x = one.product();
-
+    int y = one.getSum();
     cout << x << endl;
+
+    Pickle two;
+    two.setValues();
+    int p = two.getSum();
+
+    cout << p << endl;
 
     return 0;
 }
